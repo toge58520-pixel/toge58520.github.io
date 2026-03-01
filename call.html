@@ -3,39 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact - HVM Public School</title>
+<title>Principal - HVM Public School</title>
 
 <style>
-body{
+*{
     margin:0;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#141e30,#243b55);
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background: linear-gradient(-45deg,#141e30,#243b55,#1f4037,#99f2c8);
+    background-size:400% 400%;
+    animation:gradientBG 10s ease infinite;
     color:white;
     text-align:center;
 }
 
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
 .container{
-    padding:50px 20px;
+    padding:40px 20px;
+}
+
+.card{
+    background:rgba(255,255,255,0.08);
+    padding:20px;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 20px rgba(0,0,0,0.6);
+}
+
+.school-img{
+    width:100%;
+    max-width:300px;
+    border-radius:15px;
+    border:3px solid #00ffcc;
+    margin-bottom:15px;
+    animation:zoom 6s infinite alternate;
+}
+
+@keyframes zoom{
+    0%{transform:scale(1);}
+    100%{transform:scale(1.05);}
 }
 
 h2{
     color:#00ffcc;
 }
 
-.info{
-    background: rgba(255,255,255,0.1);
-    padding:20px;
-    border-radius:15px;
-    margin-top:20px;
-}
-
-.call-btn{
-    margin-top:20px;
+.call-btn, .back-btn{
+    margin-top:15px;
     padding:12px 25px;
     font-size:16px;
     border:none;
     border-radius:30px;
-    background: linear-gradient(45deg,#ff512f,#dd2476);
     color:white;
     cursor:pointer;
     text-decoration:none;
@@ -43,7 +70,17 @@ h2{
     transition:0.3s;
 }
 
-.call-btn:hover{
+.call-btn{
+    background: linear-gradient(45deg,#ff512f,#dd2476);
+    box-shadow:0 0 15px #ff512f;
+}
+
+.back-btn{
+    background: linear-gradient(45deg,#00c6ff,#0072ff);
+    box-shadow:0 0 15px #00c6ff;
+}
+
+.call-btn:hover, .back-btn:hover{
     transform:scale(1.1);
 }
 </style>
@@ -52,14 +89,21 @@ h2{
 <body>
 
 <div class="container">
-    <h2>Principal: Narendra Sharma</h2>
 
-    <div class="info">
-        <p>Phone Number: 9261190322</p>
+    <div class="card">
+        <!-- Animated School Image (No real photo needed) -->
+        <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=800&q=80"
+             class="school-img">
+
+        <h2>Principal: Narendra Sharma</h2>
+        <p>📞 9261190322</p>
+
         <a href="tel:9261190322" class="call-btn">Call Now</a>
+        <br>
+        <a href="index.html" class="back-btn">Back</a>
     </div>
 
 </div>
 
 </body>
-  </html>
+</html>
