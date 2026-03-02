@@ -1,26 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Admission - HVM</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+            padding: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+    </style>
 </head>
 <body>
 
-<div class="background"></div>
+<div class="container">
+    <h2>Admission Form</h2>
 
-<header>
-  <h1>Admission Open</h1>
-</header>
+    <form action="#" method="post">
+        <input type="text" placeholder="Student Name" required>
+        <input type="text" placeholder="Class" required>
+        <input type="text" placeholder="Parent Name" required>
+        <input type="tel" placeholder="Mobile Number" value="9261190322" required>
+        <button type="submit">Submit</button>
+    </form>
 
-<section>
-  <p>Join our institution for a bright academic journey.</p>
-  <button onclick="alert('Admission form coming soon!')">Apply Now</button>
-</section>
-
-<nav>
-  <a href="index.html">Home</a>
-</nav>
+</div>
 
 </body>
 </html>
