@@ -8,66 +8,60 @@
 <style>
 
 body{
-    margin:0;
-    font-family: Arial;
-    color:white;
-    text-align:center;
-    overflow:hidden;
+margin:0;
+font-family:Arial;
+color:white;
+text-align:center;
+overflow:hidden;
 }
 
 /* Motion Background */
 
 body::before{
-    content:"";
-    position:fixed;
-    top:0;
-    left:0;
-    width:200%;
-    height:200%;
-    background:url("background.png");
-    background-size:cover;
-    animation:moveBg 20s linear infinite;
-    z-index:-1;
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:200%;
+height:200%;
+background:url("https://images.unsplash.com/photo-1557683316-973673baf926") no-repeat center;
+background-size:cover;
+animation:movebg 25s linear infinite;
+z-index:-1;
 }
 
-@keyframes moveBg{
-    0%{
-        transform:translate(0,0);
-    }
-    50%{
-        transform:translate(-10%,-10%);
-    }
-    100%{
-        transform:translate(0,0);
-    }
+@keyframes movebg{
+0%{transform:translate(0,0);}
+50%{transform:translate(-10%,-10%);}
+100%{transform:translate(0,0);}
 }
 
 header{
-    padding:40px;
+padding:40px;
 }
 
 h1{
-    color:yellow;
-    font-size:35px;
+color:yellow;
+font-size:35px;
 }
 
 button{
-    padding:15px 30px;
-    font-size:18px;
-    background:green;
-    color:white;
-    border:none;
-    border-radius:10px;
-    cursor:pointer;
+padding:15px 30px;
+font-size:18px;
+background:green;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
 }
 
 button:hover{
-    background:darkgreen;
+background:darkgreen;
 }
 
 .address{
-    margin-top:20px;
-    font-size:18px;
+margin-top:20px;
+font-size:18px;
 }
 
 </style>
