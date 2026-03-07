@@ -6,12 +6,40 @@
 <title>HVM Public School</title>
 
 <style>
+
 body{
     margin:0;
     font-family: Arial;
-    background:black;
     color:white;
     text-align:center;
+    overflow:hidden;
+}
+
+/* Motion Background */
+
+body::before{
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:200%;
+    height:200%;
+    background:url("background.png");
+    background-size:cover;
+    animation:moveBg 20s linear infinite;
+    z-index:-1;
+}
+
+@keyframes moveBg{
+    0%{
+        transform:translate(0,0);
+    }
+    50%{
+        transform:translate(-10%,-10%);
+    }
+    100%{
+        transform:translate(0,0);
+    }
 }
 
 header{
@@ -20,6 +48,7 @@ header{
 
 h1{
     color:yellow;
+    font-size:35px;
 }
 
 button{
@@ -40,6 +69,7 @@ button:hover{
     margin-top:20px;
     font-size:18px;
 }
+
 </style>
 
 </head>
